@@ -1,8 +1,5 @@
-//
-// Created by 163 on 24.05.2025.
-//
-
 #ifndef POINT_CLOUD_INTERPOLATION_UTILS_H
 #define POINT_CLOUD_INTERPOLATION_UTILS_H
+#pragma once
 
-#endif //POINT_CLOUD_INTERPOLATION_UTILS_H
+#endif
