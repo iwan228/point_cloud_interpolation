@@ -49,27 +49,38 @@ cmake_ninja_workdir = C$:/Users/163/CLionProjects/point-cloud-interpolation/cmak
 
 build cmake_object_order_depends_target_point_cloud_interpolation: phony || .
 
-build CMakeFiles/point_cloud_interpolation.dir/main.cpp.obj: CXX_COMPILER__point_cloud_interpolation_unscanned_Debug C$:/Users/163/CLionProjects/point-cloud-interpolation/main.cpp || cmake_object_order_depends_target_point_cloud_interpolation
-  DEP_FILE = CMakeFiles\point_cloud_interpolation.dir\main.cpp.obj.d
+build CMakeFiles/point_cloud_interpolation.dir/src/main.cpp.obj: CXX_COMPILER__point_cloud_interpolation_unscanned_Debug C$:/Users/163/CLionProjects/point-cloud-interpolation/src/main.cpp || cmake_object_order_depends_target_point_cloud_interpolation
+  DEP_FILE = CMakeFiles\point_cloud_interpolation.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/163/CLionProjects/point-cloud-interpolation/include
   OBJECT_DIR = CMakeFiles\point_cloud_interpolation.dir
-  OBJECT_FILE_DIR = CMakeFiles\point_cloud_interpolation.dir
+  OBJECT_FILE_DIR = CMakeFiles\point_cloud_interpolation.dir\src
 
 build CMakeFiles/point_cloud_interpolation.dir/src/idw.cpp.obj: CXX_COMPILER__point_cloud_interpolation_unscanned_Debug C$:/Users/163/CLionProjects/point-cloud-interpolation/src/idw.cpp || cmake_object_order_depends_target_point_cloud_interpolation
   DEP_FILE = CMakeFiles\point_cloud_interpolation.dir\src\idw.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/163/CLionProjects/point-cloud-interpolation/include
   OBJECT_DIR = CMakeFiles\point_cloud_interpolation.dir
   OBJECT_FILE_DIR = CMakeFiles\point_cloud_interpolation.dir\src
 
 build CMakeFiles/point_cloud_interpolation.dir/src/grid.cpp.obj: CXX_COMPILER__point_cloud_interpolation_unscanned_Debug C$:/Users/163/CLionProjects/point-cloud-interpolation/src/grid.cpp || cmake_object_order_depends_target_point_cloud_interpolation
   DEP_FILE = CMakeFiles\point_cloud_interpolation.dir\src\grid.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/163/CLionProjects/point-cloud-interpolation/include
   OBJECT_DIR = CMakeFiles\point_cloud_interpolation.dir
   OBJECT_FILE_DIR = CMakeFiles\point_cloud_interpolation.dir\src
 
 build CMakeFiles/point_cloud_interpolation.dir/src/utils.cpp.obj: CXX_COMPILER__point_cloud_interpolation_unscanned_Debug C$:/Users/163/CLionProjects/point-cloud-interpolation/src/utils.cpp || cmake_object_order_depends_target_point_cloud_interpolation
   DEP_FILE = CMakeFiles\point_cloud_interpolation.dir\src\utils.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/163/CLionProjects/point-cloud-interpolation/include
+  OBJECT_DIR = CMakeFiles\point_cloud_interpolation.dir
+  OBJECT_FILE_DIR = CMakeFiles\point_cloud_interpolation.dir\src
+
+build CMakeFiles/point_cloud_interpolation.dir/src/point.cpp.obj: CXX_COMPILER__point_cloud_interpolation_unscanned_Debug C$:/Users/163/CLionProjects/point-cloud-interpolation/src/point.cpp || cmake_object_order_depends_target_point_cloud_interpolation
+  DEP_FILE = CMakeFiles\point_cloud_interpolation.dir\src\point.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/163/CLionProjects/point-cloud-interpolation/include
   OBJECT_DIR = CMakeFiles\point_cloud_interpolation.dir
   OBJECT_FILE_DIR = CMakeFiles\point_cloud_interpolation.dir\src
 
@@ -81,7 +92,7 @@ build CMakeFiles/point_cloud_interpolation.dir/src/utils.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable point_cloud_interpolation.exe
 
-build point_cloud_interpolation.exe: CXX_EXECUTABLE_LINKER__point_cloud_interpolation_Debug CMakeFiles/point_cloud_interpolation.dir/main.cpp.obj CMakeFiles/point_cloud_interpolation.dir/src/idw.cpp.obj CMakeFiles/point_cloud_interpolation.dir/src/grid.cpp.obj CMakeFiles/point_cloud_interpolation.dir/src/utils.cpp.obj
+build point_cloud_interpolation.exe: CXX_EXECUTABLE_LINKER__point_cloud_interpolation_Debug CMakeFiles/point_cloud_interpolation.dir/src/main.cpp.obj CMakeFiles/point_cloud_interpolation.dir/src/idw.cpp.obj CMakeFiles/point_cloud_interpolation.dir/src/grid.cpp.obj CMakeFiles/point_cloud_interpolation.dir/src/utils.cpp.obj CMakeFiles/point_cloud_interpolation.dir/src/point.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\point_cloud_interpolation.dir

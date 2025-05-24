@@ -10,4 +10,5 @@ add_executable(point_cloud_interpolation
         src/idw.cpp
         src/grid.cpp
         src/utils.cpp
+        src/point.cpp
 )
