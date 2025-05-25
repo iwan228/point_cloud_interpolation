@@ -2,6 +2,7 @@
 #define POINT_CLOUD_INTERPOLATION_GRID_H
 #pragma once
 #include <vector>
+#include "../include/point.h"
 using namespace std;
 struct GridNode {
     double x, y, z;
