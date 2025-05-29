@@ -1,8 +1,11 @@
 #ifndef POINT_CLOUD_INTERPOLATION_POINT_H
 #define POINT_CLOUD_INTERPOLATION_POINT_H
 #pragma once
+
 #include <vector>
 #include <random>
+#include <cmath>
+
 using namespace std;
 
 struct Point {

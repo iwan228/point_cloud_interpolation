@@ -1,6 +1,7 @@
 #include "../include/grid.h"
 #include <vector>
-//generate grid with center (cx, cy, cz), radius (r) and step
+
+//generate grid with center (cx, cy, cz), radius (r) and step(step)
 vector<GridNode> generateGrid(double cx, double cy, double cz, double r, double step) {
     vector<GridNode> grid;
 
