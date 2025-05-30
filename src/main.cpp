@@ -10,7 +10,6 @@ using namespace std;
 using namespace std::chrono;
 
 int main(){
-    unsigned int seed = clock();
     int countPoints;
     int countCl;
     int k;
@@ -42,6 +41,7 @@ int main(){
     if(k > 10 || k < 1) k = 10;
 //    cout << "Enter weighing level:" << endl;
 //    cin >> power;
+
     auto start = high_resolution_clock::now();
 
     vector<GridNode> grid = generateGrid(xCenter, yCenter, zCenter, step, radius);
@@ -63,17 +63,16 @@ int main(){
                                                            maxWeight);//point cloud
             clouds.push_back(cloud);
         }
+
         IDWInterpolator interpolator(k);
         interpolator.interpolate(clouds, grid);
 
-
-
-      //for(int i = 0; i < grid.size(); i++){
+      for(int i = 0; i < grid.size(); i++){
 //        cout << cloud[i].x << " " << cloud[i].y << " " << cloud[i].z << " " << cloud[i].weight << endl;
 //        cout << cloud[i].x << ";" << cloud[i].y << ";" << cloud[i].z << "," << endl;
 //        cout << cloud[i].x << "," << cloud[i].y << "," << cloud[i].z << endl;
-          //cout << grid[i].x << "," << grid[i].y << "," << grid[i].z << " " << grid[i].weight << " " << grid[i].isExtrapolated << endl;
-      //}
+          cout << grid[i].x << "," << grid[i].y << "," << grid[i].z << " " << grid[i].weight << " " << grid[i].isExtrapolated << endl;
+      }
     auto end = high_resolution_clock::now();  // Конец таймера
     auto duration = duration_cast<milliseconds>(end - start);  // Можно и в microseconds
 

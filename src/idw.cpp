@@ -12,7 +12,7 @@ double IDWInterpolator::squaredDistance(const Point& p, const GridNode& g) const
 void IDWInterpolator::interpolate(const vector<vector<Point>>& clouds, vector<GridNode>& grid) {
     vector<KDTree> trees;
     for (const auto& cloud : clouds)
-        trees.emplace_back(cloud);//creating one KD tree for each point cloud, and storing these trees in vector<KDTree> trees
+        trees.emplace_back(cloud);//creating one kd tree for each point cloud, and storing these trees in vector<KDTree> trees
 
     for (auto& node : grid) {
         const Point target = convertToPoint(node);
