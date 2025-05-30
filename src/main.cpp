@@ -4,9 +4,10 @@
 #include "../include/utils.h"
 #include "../include/idw.h"
 #include <vector>
-#include <ctime>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 int main(){
     unsigned int seed = clock();
@@ -41,6 +42,7 @@ int main(){
     if(k > 10 || k < 1) k = 10;
 //    cout << "Enter weighing level:" << endl;
 //    cin >> power;
+    auto start = high_resolution_clock::now();
 
     vector<GridNode> grid = generateGrid(xCenter, yCenter, zCenter, step, radius);
     cout << grid.size() << endl;
@@ -72,7 +74,10 @@ int main(){
 //        cout << cloud[i].x << "," << cloud[i].y << "," << cloud[i].z << endl;
           //cout << grid[i].x << "," << grid[i].y << "," << grid[i].z << " " << grid[i].weight << " " << grid[i].isExtrapolated << endl;
       //}
-    unsigned int end_time = clock();
-    cout << "Time: " << end_time - seed << endl;
+    auto end = high_resolution_clock::now();  // Конец таймера
+    auto duration = duration_cast<milliseconds>(end - start);  // Можно и в microseconds
+
+    cout << "teme: " << duration.count() << " ms" << endl;
+
     return 0;
 }
