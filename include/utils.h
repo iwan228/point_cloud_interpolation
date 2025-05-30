@@ -28,7 +28,7 @@ private:
     vector<Point> points;
 
     Node* build(vector<Point>& pts, int begin, int end, int depth);//recursive function to build kdtree
-    void destroy(Node* node);//recursive function to destroy kdtree
+//    void destroy(Node* node);//recursive function to destroy kdtree
 
     void nearest(Node* node, const Point& target, Point& best, double& bestDist) const;//recursive function to find nearest neighbor(private)
     void kNearest(Node* node, const Point& target, int k, vector<pair<double, Point>>& heap) const;//recursive function to find k nearest neighbors(private)

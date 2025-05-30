@@ -9,7 +9,7 @@ KDTree::KDTree(const vector<Point>& pts) {
 }//constructor
 
 KDTree::~KDTree() {
-    destroy(root);
+    //destroy(root);
 }//destructor
 
 //recursively build kdtree
@@ -35,12 +35,12 @@ KDTree::Node* KDTree::build(vector<Point>& pts, int begin, int end, int depth) {
     return node;
 }
 
-void KDTree::destroy(Node* node) {
-    if (!node) return;
-    destroy(node->left);
-    destroy(node->right);
-    delete node;
-}//delete kdtree
+//void KDTree::destroy(Node* node) {
+//    if (!node) return;
+//    destroy(node->left);
+//    destroy(node->right);
+//    delete node;
+//}//delete kdtree
 
 double KDTree::squaredDistance(const Point& a, const Point& b) const {
     double dx = a.x - b.x;
