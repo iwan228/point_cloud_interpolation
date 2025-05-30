@@ -123,3 +123,12 @@ vector<Point> KDTree::kNearestNeighbors(const Point& target, int k) const {
     return result;
 }//external interface(searching nearest k neighbor)
 
+Point convertToPoint(GridNode& node){
+    return Point{node.x, node.y, node.z, node.weight};
+}
+double sumVector(vector<double> w){
+    double sum = 0;
+    for(auto& i : w)
+        sum +=i;
+    return sum;
+}

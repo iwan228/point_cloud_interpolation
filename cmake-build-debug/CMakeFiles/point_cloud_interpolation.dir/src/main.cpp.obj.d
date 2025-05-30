@@ -190,4 +190,5 @@ CMakeFiles/point_cloud_interpolation.dir/src/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.0.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h \
  C:/Users/163/CLionProjects/point-cloud-interpolation/include/grid.h \
- C:/Users/163/CLionProjects/point-cloud-interpolation/include/utils.h
+ C:/Users/163/CLionProjects/point-cloud-interpolation/include/utils.h \
+ C:/Users/163/CLionProjects/point-cloud-interpolation/include/idw.h

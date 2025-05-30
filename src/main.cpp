@@ -2,14 +2,20 @@
 #include "../include/point.h"
 #include "../include/grid.h"
 #include "../include/utils.h"
+#include "../include/idw.h"
 #include <vector>
+
 using namespace std;
 
 int main(){
     int countPoints;
+    int countCl;
+    int k;
     double minCoord, maxCoord;
     double minWeight, maxWeight;
     double xCenter, yCenter, zCenter, step, radius;
+    cout << "Enter count clouds: ";
+    cin >> countCl;
     cout << "Enter count points: ";
     cin >> countPoints;
     cout << "Enter min coord: ";
@@ -20,6 +26,7 @@ int main(){
     cin >> minWeight;
     cout << "Enter max weight: " << endl;
     cin >> maxWeight;
+
     cout << "Center of grid(x,y,z): " << endl;
     cin >> xCenter >> yCenter >> zCenter;
     cout << "Grid step: " << endl;
@@ -27,35 +34,42 @@ int main(){
     cout << "Grid radius: " << endl;
     cin >> radius;
 
-    vector<Point> cloud = generateRandomPointCloud(countPoints, minCoord, maxCoord,0,10);//point cloud
+    cout << "Interpolation by k nearest points \n k(<=10)=" << endl;
+    cin >> k;
+    if(k > 10 || k < 1) k = 10;
+//    cout << "Enter weighing level:" << endl;
+//    cin >> power;
+
     vector<GridNode> grid = generateGrid(xCenter, yCenter, zCenter, step, radius);
+    cout << grid.size() << endl;
 
-    for(int i = 0; i < cloud.size(); i++){
-        //cout << cloud[i].x << " " << cloud[i].y << " " << cloud[i].z << " " << cloud[i].weight << endl;
-        //cout << cloud[i].x << ";" << cloud[i].y << ";" << cloud[i].z << "," << endl;
-        cout << cloud[i].x << "," << cloud[i].y << "," << cloud[i].z << endl;
-    }
-    // Строим дерево
-    KDTree tree(cloud);
+//    vector<Point> cloud = generateRandomPointCloud(countPoints,
+//                                                   minCoord,
+//                                                   maxCoord,
+//                                                   minWeight,
+//                                                   maxWeight);//point cloud
 
-    // Точка, для которой ищем соседей
-    Point query = {2.5, 3.5, 4.5, 0.0};
+    vector<vector<Point>> clouds;
+    clouds.reserve(countCl);
+        for(int i = 0; i < countCl; ++i){
+            vector<Point> cloud = generateRandomPointCloud(countPoints,
+                                                           minCoord,
+                                                           maxCoord,
+                                                           minWeight,
+                                                           maxWeight);//point cloud
+            clouds.push_back(cloud);
+        }
+        IDWInterpolator interpolator(3);
+        interpolator.interpolate(clouds, grid);
 
-    // Один ближайший сосед
-    Point nearest = tree.nearestNeighbor(query);
-    std::cout << "Nearest neighbor: ("
-              << nearest.x << ", " << nearest.y << ", " << nearest.z
-              << "), weight = " << nearest.weight << "\n";
 
-    // K ближайших соседей
-    int k = 3;
-    std::vector<Point> neighbors = tree.kNearestNeighbors(query, k);
-    std::cout << k << " nearest neighbors:\n";
-    for (const Point& p : neighbors) {
-        std::cout << "  (" << p.x << ", " << p.y << ", " << p.z
-                  << "), weight = " << p.weight << "\n";
-    }
 
+      for(int i = 0; i < grid.size(); i++){
+//        cout << cloud[i].x << " " << cloud[i].y << " " << cloud[i].z << " " << cloud[i].weight << endl;
+//        cout << cloud[i].x << ";" << cloud[i].y << ";" << cloud[i].z << "," << endl;
+//        cout << cloud[i].x << "," << cloud[i].y << "," << cloud[i].z << endl;
+          cout << grid[i].x << "," << grid[i].y << "," << grid[i].z << " " << grid[i].weight << " " << grid[i].isExtrapolated << endl;
+      }
 
     return 0;
 }

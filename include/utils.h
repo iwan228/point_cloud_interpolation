@@ -3,6 +3,7 @@
 #pragma once
 
 #include "../include/point.h"
+#include "../include/grid.h"
 
 using namespace std;
 
@@ -34,4 +35,7 @@ private:
 
     double squaredDistance(const Point& a, const Point& b) const;//calculate squared distance
 };
+
+Point convertToPoint(GridNode& node);
+double sumVector(vector<double> w);
 #endif
