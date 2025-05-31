@@ -39,19 +39,11 @@ int main(){
     cout << "Interpolation by k nearest points \n k(<=10)=" << endl;
     cin >> k;
     if(k > 10 || k < 1) k = 10;
-//    cout << "Enter weighing level:" << endl;
-//    cin >> power;
 
     auto start = high_resolution_clock::now();
 
     vector<GridNode> grid = generateGrid(xCenter, yCenter, zCenter, step, radius);
     cout << grid.size() << endl;
-
-//    vector<Point> cloud = generateRandomPointCloud(countPoints,
-//                                                   minCoord,
-//                                                   maxCoord,
-//                                                   minWeight,
-//                                                   maxWeight);//point cloud
 
     vector<vector<Point>> clouds;
     clouds.reserve(countCl);
@@ -73,8 +65,8 @@ int main(){
 //        cout << cloud[i].x << "," << cloud[i].y << "," << cloud[i].z << endl;
           cout << grid[i].x << "," << grid[i].y << "," << grid[i].z << " " << grid[i].weight << " " << grid[i].isExtrapolated << endl;
       }
-    auto end = high_resolution_clock::now();  // Конец таймера
-    auto duration = duration_cast<milliseconds>(end - start);  // Можно и в microseconds
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end - start);
 
     cout << "teme: " << duration.count() << " ms" << endl;
 
