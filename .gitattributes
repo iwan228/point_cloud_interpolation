@@ -1,0 +1,3 @@
+Makefile linguist-language=Text
+*.cpp linguist-language=C++
+*.h linguist-language=C++
