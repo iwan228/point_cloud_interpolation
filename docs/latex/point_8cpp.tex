@@ -1,0 +1,77 @@
+\doxysection{C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/src/point.cpp File Reference}
+\hypertarget{point_8cpp}{}\label{point_8cpp}\index{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/src/point.cpp@{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/src/point.cpp}}
+
+
+Implementation of random point cloud generation.  
+
+
+{\ttfamily \#include "{}../include/point.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{point_8cpp_a0e93e727c508ec072735b87137dec60d}{noise\+Mask}} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Simple deterministic noise mask to add spatial sparsity. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \mbox{\hyperlink{point_8cpp_a140d3ace5c2bbac9edfa89095a9cb81f}{generate\+Random\+Point\+Cloud}} (int N, double minC, double maxC, double minW, double maxW)
+\begin{DoxyCompactList}\small\item\em Generates a random point cloud within the given coordinate and weight ranges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of random point cloud generation. 
+
+Contains the implementation of a utility to generate a noisy and sparse 3D point cloud using a basic sinusoidal noise mask. 
+
+\label{doc-func-members}
+\Hypertarget{point_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{point_8cpp_a140d3ace5c2bbac9edfa89095a9cb81f}\index{point.cpp@{point.cpp}!generateRandomPointCloud@{generateRandomPointCloud}}
+\index{generateRandomPointCloud@{generateRandomPointCloud}!point.cpp@{point.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRandomPointCloud()}{generateRandomPointCloud()}}
+{\footnotesize\ttfamily \label{point_8cpp_a140d3ace5c2bbac9edfa89095a9cb81f} 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ generate\+Random\+Point\+Cloud (\begin{DoxyParamCaption}\item[{int}]{N}{, }\item[{double}]{minC}{, }\item[{double}]{maxC}{, }\item[{double}]{minW}{, }\item[{double}]{maxW}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random point cloud within the given coordinate and weight ranges. 
+
+This function creates a vector of randomly distributed points in 3D space, using a basic noise filter to introduce sparsity and holes in the distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Number of points to generate. \\
+\hline
+{\em minC} & Minimum coordinate value (for x, y, and z). \\
+\hline
+{\em maxC} & Maximum coordinate value (for x, y, and z). \\
+\hline
+{\em minW} & Minimum weight value. \\
+\hline
+{\em maxW} & Maximum weight value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of randomly generated points. 
+\end{DoxyReturn}
+\Hypertarget{point_8cpp_a0e93e727c508ec072735b87137dec60d}\index{point.cpp@{point.cpp}!noiseMask@{noiseMask}}
+\index{noiseMask@{noiseMask}!point.cpp@{point.cpp}}
+\doxysubsubsection{\texorpdfstring{noiseMask()}{noiseMask()}}
+{\footnotesize\ttfamily \label{point_8cpp_a0e93e727c508ec072735b87137dec60d} 
+double noise\+Mask (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{double}]{z}{}\end{DoxyParamCaption})}
+
+
+
+Simple deterministic noise mask to add spatial sparsity. 
+
+Computes a noise-\/based mask value using sine and cosine functions. Points with noise values above a threshold are skipped during generation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate \\
+\hline
+{\em y} & Y-\/coordinate \\
+\hline
+{\em z} & Z-\/coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value between 0 and \texorpdfstring{$\sim$}{\string~}3 representing the noise mask. 
+\end{DoxyReturn}

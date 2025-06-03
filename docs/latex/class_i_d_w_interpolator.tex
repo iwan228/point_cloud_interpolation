@@ -1,0 +1,71 @@
+\doxysection{IDWInterpolator Class Reference}
+\hypertarget{class_i_d_w_interpolator}{}\label{class_i_d_w_interpolator}\index{IDWInterpolator@{IDWInterpolator}}
+
+
+Performs Inverse Distance Weighting (IDW) interpolation on a regular 3D grid using multiple point clouds.  
+
+
+
+
+{\ttfamily \#include $<$idw.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_d_w_interpolator_aed77d3c7b489d94a2d82774d139b8278}{IDWInterpolator}} (int k)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_i_d_w_interpolator}{IDWInterpolator}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_d_w_interpolator_a4e765b5c450a4ff1e6e6b4d6498c7820}{interpolate}} (const vector$<$ vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ $>$ \&clouds, vector$<$ \mbox{\hyperlink{struct_grid_node}{Grid\+Node}} $>$ \&grid)
+\begin{DoxyCompactList}\small\item\em Performs IDW interpolation on the given grid using multiple point clouds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Performs Inverse Distance Weighting (IDW) interpolation on a regular 3D grid using multiple point clouds. 
+
+\label{doc-constructors}
+\Hypertarget{class_i_d_w_interpolator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_d_w_interpolator_aed77d3c7b489d94a2d82774d139b8278}\index{IDWInterpolator@{IDWInterpolator}!IDWInterpolator@{IDWInterpolator}}
+\index{IDWInterpolator@{IDWInterpolator}!IDWInterpolator@{IDWInterpolator}}
+\doxysubsubsection{\texorpdfstring{IDWInterpolator()}{IDWInterpolator()}}
+{\footnotesize\ttfamily \label{class_i_d_w_interpolator_aed77d3c7b489d94a2d82774d139b8278} 
+IDWInterpolator\+::\+IDWInterpolator (\begin{DoxyParamCaption}\item[{int}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_i_d_w_interpolator}{IDWInterpolator}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Number of nearest neighbors to consider during interpolation. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_i_d_w_interpolator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_d_w_interpolator_a4e765b5c450a4ff1e6e6b4d6498c7820}\index{IDWInterpolator@{IDWInterpolator}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!IDWInterpolator@{IDWInterpolator}}
+\doxysubsubsection{\texorpdfstring{interpolate()}{interpolate()}}
+{\footnotesize\ttfamily \label{class_i_d_w_interpolator_a4e765b5c450a4ff1e6e6b4d6498c7820} 
+void IDWInterpolator\+::interpolate (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ $>$ \&}]{clouds}{, }\item[{vector$<$ \mbox{\hyperlink{struct_grid_node}{Grid\+Node}} $>$ \&}]{grid}{}\end{DoxyParamCaption})}
+
+
+
+Performs IDW interpolation on the given grid using multiple point clouds. 
+
+This function interpolates weights for each node in a regular grid by considering the k nearest neighbors from each point cloud. It builds a KD-\/tree for each cloud and computes the weighted average based on the inverse of the squared distances.
+
+
+\begin{DoxyParams}{Parameters}
+{\em clouds} & A vector of point clouds, where each point cloud is a vector of \doxylink{struct_point}{Point} structures. \\
+\hline
+{\em grid} & A reference to the vector of \doxylink{struct_grid_node}{Grid\+Node} structures that will receive the interpolated values. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/include/\mbox{\hyperlink{idw_8h}{idw.\+h}}\item 
+C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/src/\mbox{\hyperlink{idw_8cpp}{idw.\+cpp}}\end{DoxyCompactItemize}

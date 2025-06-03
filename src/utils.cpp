@@ -1,3 +1,7 @@
+/**
+ * @file utils.cpp
+ * @brief Implementation of KDTree class and utility functions for interpolation.
+ */
 #include "../include/utils.h"
 #include <algorithm>//sort, make_heap, push_heap, pop_heap
 
@@ -9,7 +13,7 @@ KDTree::KDTree(const vector<Point>& pts) {
 }//constructor
 
 KDTree::~KDTree() {
-    //destroy(root);
+    //destroy(root); // Optional: Implement a destroy() method to clean up memory.
 }//destructor
 
 //recursively build kdtree

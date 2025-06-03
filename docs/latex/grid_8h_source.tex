@@ -1,0 +1,30 @@
+\doxysection{grid.\+h}
+\hypertarget{grid_8h_source}{}\label{grid_8h_source}\index{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/grid.h@{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/grid.h}}
+\mbox{\hyperlink{grid_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ POINT\_CLOUD\_INTERPOLATION\_GRID\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ POINT\_CLOUD\_INTERPOLATION\_GRID\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{point_8h}{../include/point.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_grid_node}{GridNode}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_grid_node_af15f6d9a0bfd0483e88664bd3eaedc64}{x}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_grid_node_ab51f4d54940a599063a7ebf6cd7f0773}{y}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_grid_node_a7ac4b46d5b784436d0b0a0c1341fa7ff}{z}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_grid_node_ac7a7f8aac7056601c95e4c64d09bd95c}{weight}}\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_grid_node_aade81e70ef40b081f26c64a2c7c6c16b}{isExtrapolated}}\ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00044\ vector<GridNode>\ \mbox{\hyperlink{grid_8h_abad189d8d35931b0792e765ad9e9b3c7}{generateGrid}}(}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ cx,\ \textcolor{keywordtype}{double}\ cy,\ \textcolor{keywordtype}{double}\ cz,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ step,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ r}
+\DoxyCodeLine{00048\ );}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//POINT\_CLOUD\_INTERPOLATION\_GRID\_H}}
+
+\end{DoxyCode}

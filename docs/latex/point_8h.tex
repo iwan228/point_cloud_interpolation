@@ -1,0 +1,58 @@
+\doxysection{C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/include/point.h File Reference}
+\hypertarget{point_8h}{}\label{point_8h}\index{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/point.h@{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/point.h}}
+
+
+Declaration of the \doxylink{struct_point}{Point} structure and random point cloud generation function.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_point}{Point}}
+\begin{DoxyCompactList}\small\item\em Represents a 3D point with an associated weight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \mbox{\hyperlink{point_8h_a140d3ace5c2bbac9edfa89095a9cb81f}{generate\+Random\+Point\+Cloud}} (int N, double minC, double maxC, double minW, double maxW)
+\begin{DoxyCompactList}\small\item\em Generates a random point cloud within the given coordinate and weight ranges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of the \doxylink{struct_point}{Point} structure and random point cloud generation function. 
+
+Defines the {\ttfamily \doxylink{struct_point}{Point}} structure used in point cloud interpolation and declares the function to generate synthetic point clouds with configurable parameters. 
+
+\label{doc-func-members}
+\Hypertarget{point_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{point_8h_a140d3ace5c2bbac9edfa89095a9cb81f}\index{point.h@{point.h}!generateRandomPointCloud@{generateRandomPointCloud}}
+\index{generateRandomPointCloud@{generateRandomPointCloud}!point.h@{point.h}}
+\doxysubsubsection{\texorpdfstring{generateRandomPointCloud()}{generateRandomPointCloud()}}
+{\footnotesize\ttfamily \label{point_8h_a140d3ace5c2bbac9edfa89095a9cb81f} 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ generate\+Random\+Point\+Cloud (\begin{DoxyParamCaption}\item[{int}]{N}{, }\item[{double}]{minC}{, }\item[{double}]{maxC}{, }\item[{double}]{minW}{, }\item[{double}]{maxW}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random point cloud within the given coordinate and weight ranges. 
+
+This function creates a vector of randomly distributed points in 3D space, using a basic noise filter to introduce sparsity and holes in the distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Number of points to generate. \\
+\hline
+{\em minC} & Minimum coordinate value (for x, y, and z). \\
+\hline
+{\em maxC} & Maximum coordinate value (for x, y, and z). \\
+\hline
+{\em minW} & Minimum weight value. \\
+\hline
+{\em maxW} & Maximum weight value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of randomly generated points. 
+\end{DoxyReturn}

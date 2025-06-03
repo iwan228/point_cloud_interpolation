@@ -1,3 +1,7 @@
+/**
+ * @file grid.cpp
+ * @brief Implementation of the 3D grid generation function for GridNode.
+ */
 #include "../include/grid.h"
 #include <vector>
 

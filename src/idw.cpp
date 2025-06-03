@@ -1,3 +1,8 @@
+/**
+ * @file idw.cpp
+ * @brief Implementation of the IDWInterpolator class.
+ */
+
 #include "../include/idw.h"
 
 IDWInterpolator::IDWInterpolator( int k): k_(k) {}//constructor

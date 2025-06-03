@@ -1,0 +1,57 @@
+\doxysection{C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/include/grid.h File Reference}
+\hypertarget{grid_8h}{}\label{grid_8h}\index{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/grid.h@{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/grid.h}}
+
+
+Header file for generating a regular 3D grid of \doxylink{struct_grid_node}{Grid\+Node}.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}../include/point.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_grid_node}{Grid\+Node}}
+\begin{DoxyCompactList}\small\item\em Represents a node in the regular 3D grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{struct_grid_node}{Grid\+Node}} $>$ \mbox{\hyperlink{grid_8h_abad189d8d35931b0792e765ad9e9b3c7}{generate\+Grid}} (double cx, double cy, double cz, double step, double r)
+\begin{DoxyCompactList}\small\item\em Generates a regular cubic 3D grid with a given step size and radius around the point (cx, cy, cz). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for generating a regular 3D grid of \doxylink{struct_grid_node}{Grid\+Node}. 
+
+Contains the definition of the \doxylink{struct_grid_node}{Grid\+Node} structure and the generate\+Grid function for creating a three-\/dimensional regular grid around a given center with a specified step and radius. 
+
+\label{doc-func-members}
+\Hypertarget{grid_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{grid_8h_abad189d8d35931b0792e765ad9e9b3c7}\index{grid.h@{grid.h}!generateGrid@{generateGrid}}
+\index{generateGrid@{generateGrid}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{generateGrid()}{generateGrid()}}
+{\footnotesize\ttfamily \label{grid_8h_abad189d8d35931b0792e765ad9e9b3c7} 
+vector$<$ \mbox{\hyperlink{struct_grid_node}{Grid\+Node}} $>$ generate\+Grid (\begin{DoxyParamCaption}\item[{double}]{cx}{, }\item[{double}]{cy}{, }\item[{double}]{cz}{, }\item[{double}]{step}{, }\item[{double}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Generates a regular cubic 3D grid with a given step size and radius around the point (cx, cy, cz). 
+
+Creates a three-\/dimensional grid within a cube of side length 2\texorpdfstring{$\ast$}{*}r and step size {\ttfamily step}. The center of the grid is specified by the coordinates (cx, cy, cz). This function is used to define a regular grid, which is then used for interpolation of values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cx} & X-\/coordinate of the grid center \\
+\hline
+{\em cy} & Y-\/coordinate of the grid center \\
+\hline
+{\em cz} & Z-\/coordinate of the grid center \\
+\hline
+{\em step} & Step size between grid nodes \\
+\hline
+{\em r} & Radius (relative to the center) within which the grid is created \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{struct_grid_node}{Grid\+Node} objects representing the grid nodes 
+\end{DoxyReturn}

@@ -1,0 +1,67 @@
+\doxysection{C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/include/utils.h File Reference}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/utils.h@{C:/Users/163/CLionProjects/point-\/cloud-\/interpolation/include/utils.h}}
+
+
+Declaration of the \doxylink{class_k_d_tree}{KDTree} class and utility functions for point cloud processing.  
+
+
+{\ttfamily \#include "{}../include/point.\+h"{}}\newline
+{\ttfamily \#include "{}../include/grid.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_k_d_tree}{KDTree}}
+\begin{DoxyCompactList}\small\item\em A 3D k-\/d tree for efficient nearest neighbor search in point clouds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{utils_8h_aba400071c885b86db74337a19eb66a7d}{convert\+To\+Point}} (\mbox{\hyperlink{struct_grid_node}{Grid\+Node}} \&node)
+\begin{DoxyCompactList}\small\item\em Converts a \doxylink{struct_grid_node}{Grid\+Node} to a \doxylink{struct_point}{Point}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{utils_8h_a7d6a288c4b61feecad7862299470396c}{sum\+Vector}} (vector$<$ double $>$ w)
+\begin{DoxyCompactList}\small\item\em Computes the sum of a vector of doubles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of the \doxylink{class_k_d_tree}{KDTree} class and utility functions for point cloud processing. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{utils_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8h_aba400071c885b86db74337a19eb66a7d}\index{utils.h@{utils.h}!convertToPoint@{convertToPoint}}
+\index{convertToPoint@{convertToPoint}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{convertToPoint()}{convertToPoint()}}
+{\footnotesize\ttfamily \label{utils_8h_aba400071c885b86db74337a19eb66a7d} 
+\mbox{\hyperlink{struct_point}{Point}} convert\+To\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grid_node}{Grid\+Node}} \&}]{node}{}\end{DoxyParamCaption})}
+
+
+
+Converts a \doxylink{struct_grid_node}{Grid\+Node} to a \doxylink{struct_point}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Grid node to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_point}{Point} equivalent of the \doxylink{struct_grid_node}{Grid\+Node}. 
+\end{DoxyReturn}
+\Hypertarget{utils_8h_a7d6a288c4b61feecad7862299470396c}\index{utils.h@{utils.h}!sumVector@{sumVector}}
+\index{sumVector@{sumVector}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{sumVector()}{sumVector()}}
+{\footnotesize\ttfamily \label{utils_8h_a7d6a288c4b61feecad7862299470396c} 
+double sum\+Vector (\begin{DoxyParamCaption}\item[{vector$<$ double $>$}]{w}{}\end{DoxyParamCaption})}
+
+
+
+Computes the sum of a vector of doubles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Vector of weights. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum of the weights. 
+\end{DoxyReturn}

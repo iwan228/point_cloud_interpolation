@@ -1,0 +1,95 @@
+\doxysection{KDTree Class Reference}
+\hypertarget{class_k_d_tree}{}\label{class_k_d_tree}\index{KDTree@{KDTree}}
+
+
+A 3D k-\/d tree for efficient nearest neighbor search in point clouds.  
+
+
+
+
+{\ttfamily \#include $<$utils.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_d_tree_a97866690bcef97fcefc8beee87578924}{KDTree}} (const vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_d_tree}{KDTree} from a set of points. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_d_tree_a0920219cb85bb5abc8dc1bb22c44a56c}\label{class_k_d_tree_a0920219cb85bb5abc8dc1bb22c44a56c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+KDTree} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{class_k_d_tree_a017f7a29acedb66216ec311c73f7f374}{nearest\+Neighbor}} (const \mbox{\hyperlink{struct_point}{Point}} \&target) const
+\begin{DoxyCompactList}\small\item\em Finds the nearest neighbor to the given target point. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \mbox{\hyperlink{class_k_d_tree_ac119ca3a480f42efeee278b6f244c96c}{k\+Nearest\+Neighbors}} (const \mbox{\hyperlink{struct_point}{Point}} \&target, int k) const
+\begin{DoxyCompactList}\small\item\em Finds the k nearest neighbors to the given target point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 3D k-\/d tree for efficient nearest neighbor search in point clouds. 
+
+\label{doc-constructors}
+\Hypertarget{class_k_d_tree_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_d_tree_a97866690bcef97fcefc8beee87578924}\index{KDTree@{KDTree}!KDTree@{KDTree}}
+\index{KDTree@{KDTree}!KDTree@{KDTree}}
+\doxysubsubsection{\texorpdfstring{KDTree()}{KDTree()}}
+{\footnotesize\ttfamily \label{class_k_d_tree_a97866690bcef97fcefc8beee87578924} 
+KDTree\+::\+KDTree (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \&}]{points}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_d_tree}{KDTree} from a set of points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Vector of input points to build the tree. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_k_d_tree_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_d_tree_ac119ca3a480f42efeee278b6f244c96c}\index{KDTree@{KDTree}!kNearestNeighbors@{kNearestNeighbors}}
+\index{kNearestNeighbors@{kNearestNeighbors}!KDTree@{KDTree}}
+\doxysubsubsection{\texorpdfstring{kNearestNeighbors()}{kNearestNeighbors()}}
+{\footnotesize\ttfamily \label{class_k_d_tree_ac119ca3a480f42efeee278b6f244c96c} 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ KDTree\+::k\+Nearest\+Neighbors (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \&}]{target}{, }\item[{int}]{k}{}\end{DoxyParamCaption}) const}
+
+
+
+Finds the k nearest neighbors to the given target point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target point. \\
+\hline
+{\em k} & Number of nearest neighbors to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of k nearest points. 
+\end{DoxyReturn}
+\Hypertarget{class_k_d_tree_a017f7a29acedb66216ec311c73f7f374}\index{KDTree@{KDTree}!nearestNeighbor@{nearestNeighbor}}
+\index{nearestNeighbor@{nearestNeighbor}!KDTree@{KDTree}}
+\doxysubsubsection{\texorpdfstring{nearestNeighbor()}{nearestNeighbor()}}
+{\footnotesize\ttfamily \label{class_k_d_tree_a017f7a29acedb66216ec311c73f7f374} 
+\mbox{\hyperlink{struct_point}{Point}} KDTree\+::nearest\+Neighbor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \&}]{target}{}\end{DoxyParamCaption}) const}
+
+
+
+Finds the nearest neighbor to the given target point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target point to search nearest neighbor for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest point from the \doxylink{class_k_d_tree}{KDTree}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/include/\mbox{\hyperlink{utils_8h}{utils.\+h}}\item 
+C\+:/\+Users/163/\+CLion\+Projects/point-\/cloud-\/interpolation/src/\mbox{\hyperlink{utils_8cpp}{utils.\+cpp}}\end{DoxyCompactItemize}
