@@ -22,6 +22,10 @@ To speed up the nearest neighbor search, the KD-tree structure is used, which al
 ## Project Structure
 
 ```text
+docs/
+├── doxygen      // Doxygen documentation
+└── html/        // HTML documentation
+
 include/
 ├── grid.h       // Regular grid node structure
 ├── idw.h        // IDWInterpolator class declaration
