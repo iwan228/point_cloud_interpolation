@@ -6,8 +6,8 @@
 #include <vector>
 
 //generate grid with center (cx, cy, cz), radius (r) and step(step)
-vector<GridNode> generateGrid(double cx, double cy, double cz, double step, double r) {
-    vector<GridNode> grid;
+std::vector<GridNode> generateGrid(double cx, double cy, double cz, double step, double r) {
+    std::vector<GridNode> grid;
 
     int steps = static_cast<int>(r / step);
 

@@ -5,7 +5,7 @@
 
 #include "../include/idw.h"
 
-IDWInterpolator::IDWInterpolator( int k): k_(k) {}//constructor
+IDWInterpolator::IDWInterpolator( int k): k_(k) {}
 
 double IDWInterpolator::squaredDistance(const Point& p, const GridNode& g) const {
     double dx = p.x - g.x;
@@ -33,7 +33,7 @@ void IDWInterpolator::interpolate(const std::vector<std::vector<Point>>& clouds,
                 double sumWeighted = 0, sumWeight = 0;
                 for (const auto& pt : knearest) {
                     double dist2 = squaredDistance(pt, node);
-                    if (dist2 < 1e-4) {
+                    if (dist2 < ZERO) {
                         sumWeighted = pt.weight;
                         sumWeight = 1.0;
                         break;

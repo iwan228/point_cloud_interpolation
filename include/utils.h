@@ -95,5 +95,5 @@ private:
  */
 Point convertToPoint(GridNode& node);
 
-double sumVector(std::vector<double> w);
+double sumVector(const std::vector<double>& w);
 #endif

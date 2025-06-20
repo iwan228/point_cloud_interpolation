@@ -6,6 +6,8 @@
 #define POINT_CLOUD_INTERPOLATION_IDW_H
 #pragma once
 
+constexpr double ZERO = 1e-4;
+
 #include <vector>
 #include <cmath>
 #include "../include/point.h"

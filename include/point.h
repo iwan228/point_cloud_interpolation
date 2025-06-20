@@ -9,6 +9,8 @@
 #define POINT_CLOUD_INTERPOLATION_POINT_H
 #pragma once
 
+constexpr double NOISE_FILTER = 0.9;
+
 #include <vector>
 #include <random>
 #include <cmath>

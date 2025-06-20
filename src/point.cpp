@@ -34,7 +34,7 @@ std::uniform_real_distribution<double> distW(minW, maxW);
 while (cloud.size() < N) {
     Point p = {dist(gen), dist(gen), dist(gen), distW(gen)};
 
-    if (noiseMask(p.x, p.y, p.z) < 0.9)//lower the value, the bigger holes.
+    if (noiseMask(p.x, p.y, p.z) < NOISE_FILTER)//lower the value, the bigger holes.
         cloud.push_back(p);
 }
 return cloud;//vector<Point>

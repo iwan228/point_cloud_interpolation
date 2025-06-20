@@ -8,11 +8,11 @@
 KDTree::KDTree(const std::vector<Point>& pts) {
     points = pts;
     root = build(points, 0, points.size(), 0);
-}//constructor
+}
 
 KDTree::~KDTree() {
     //destroy(root); // Optional: Implement a destroy() method to clean up memory.
-}//destructor
+}
 
 //recursively build kdtree
 KDTree::Node* KDTree::build(std::vector<Point>& pts, int begin, int end, int depth) {
@@ -29,7 +29,7 @@ KDTree::Node* KDTree::build(std::vector<Point>& pts, int begin, int end, int dep
 
     sort(pts.begin() + begin, pts.begin() + end, compare);//sort by compare(pts.begin() - iterator)
 
-    Node* node = new Node;//create new node
+    Node* node = new Node;
     node->point = pts[mid];//point of this node(middle)
     node->axis = axis;//axis of this node
     node->left = build(pts, begin, mid, depth + 1);//build left subtree
@@ -128,9 +128,6 @@ std::vector<Point> KDTree::kNearestNeighbors(const Point& target, int k) const {
 Point convertToPoint(GridNode& node){
     return Point{node.x, node.y, node.z, node.weight};
 }
-double sumVector(std::vector<double> w){
-    double sum = 0;
-    for(auto& i : w)
-        sum +=i;
-    return sum;
+double sumVector(const std::vector<double>& w){
+    return std::accumulate(w.begin(), w.end(), 0.0);
 }
