@@ -14,14 +14,14 @@ double IDWInterpolator::squaredDistance(const Point& p, const GridNode& g) const
     return dx * dx + dy * dy + dz * dz;
 }
 
-void IDWInterpolator::interpolate(const vector<vector<Point>>& clouds, vector<GridNode>& grid) {
-    vector<KDTree> trees;
+void IDWInterpolator::interpolate(const std::vector<std::vector<Point>>& clouds, std::vector<GridNode>& grid) {
+    std::vector<KDTree> trees;
     for (const auto& cloud : clouds)
         trees.emplace_back(cloud);//creating one kd tree for each point cloud, and storing these trees in vector<KDTree> trees
 
     for (auto& node : grid) {
         const Point target = convertToPoint(node);
-        vector<double> weights;
+        std::vector<double> weights;
 
         for (const auto& tree : trees) {
             if (k_ == 1) {
@@ -29,7 +29,7 @@ void IDWInterpolator::interpolate(const vector<vector<Point>>& clouds, vector<Gr
                 weights.push_back(nearest.weight);
             } else
             {
-                vector<Point> knearest = tree.kNearestNeighbors(target, k_);
+                std::vector<Point> knearest = tree.kNearestNeighbors(target, k_);
                 double sumWeighted = 0, sumWeight = 0;
                 for (const auto& pt : knearest) {
                     double dist2 = squaredDistance(pt, node);

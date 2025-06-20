@@ -5,9 +5,7 @@
 #include "../include/utils.h"
 #include <algorithm>//sort, make_heap, push_heap, pop_heap
 
-using namespace std;
-
-KDTree::KDTree(const vector<Point>& pts) {
+KDTree::KDTree(const std::vector<Point>& pts) {
     points = pts;
     root = build(points, 0, points.size(), 0);
 }//constructor
@@ -17,7 +15,7 @@ KDTree::~KDTree() {
 }//destructor
 
 //recursively build kdtree
-KDTree::Node* KDTree::build(vector<Point>& pts, int begin, int end, int depth) {
+KDTree::Node* KDTree::build(std::vector<Point>& pts, int begin, int end, int depth) {
     if (begin >= end) return nullptr;
 
     int axis = depth % 3;//define partition axis
@@ -83,11 +81,11 @@ Point KDTree::nearestNeighbor(const Point& target) const {
     return best;
 }//external interface(searching nearest neighbor)
 
-void KDTree::kNearest(Node* node, const Point& target, int k, vector<pair<double, Point>>& heap) const {
+void KDTree::kNearest(Node* node, const Point& target, int k, std::vector<std::pair<double, Point>>& heap) const {
     if (!node) return;
 
     double d = squaredDistance(node->point, target);
-    auto comp = [](const pair<double, Point>& a, const pair<double, Point>& b) {
+    auto comp = [](const std::pair<double, Point>& a, const std::pair<double, Point>& b) {
         return a.first < b.first;
     };//If a.first is less than b.first, then a is considered to be less than b(lambda function)
 
@@ -114,15 +112,15 @@ void KDTree::kNearest(Node* node, const Point& target, int k, vector<pair<double
     }
 }//recursive function to find k nearest neighbors(private)
 
-vector<Point> KDTree::kNearestNeighbors(const Point& target, int k) const {
-    vector<pair<double, Point>> heap;
-    auto comp = [](const pair<double, Point>& a, const pair<double, Point>& b) {
+std::vector<Point> KDTree::kNearestNeighbors(const Point& target, int k) const {
+    std::vector<std::pair<double, Point>> heap;
+    auto comp = [](const std::pair<double, Point>& a, const std::pair<double, Point>& b) {
         return a.first < b.first;
     };
     make_heap(heap.begin(), heap.end(), comp);
     kNearest(root, target, k, heap);
 
-    vector<Point> result;
+    std::vector<Point> result;
     for (auto& p : heap) result.push_back(p.second);
     return result;
 }//external interface(searching nearest k neighbor)
@@ -130,7 +128,7 @@ vector<Point> KDTree::kNearestNeighbors(const Point& target, int k) const {
 Point convertToPoint(GridNode& node){
     return Point{node.x, node.y, node.z, node.weight};
 }
-double sumVector(vector<double> w){
+double sumVector(std::vector<double> w){
     double sum = 0;
     for(auto& i : w)
         sum +=i;

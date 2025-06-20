@@ -9,8 +9,6 @@
 #include "../include/point.h"
 #include "../include/grid.h"
 
-using namespace std;
-
 /**
  * @class KDTree
  * @brief A 3D k-d tree for efficient nearest neighbor search in point clouds.
@@ -21,10 +19,8 @@ public:
     * @brief Constructs a KDTree from a set of points.
     * @param points Vector of input points to build the tree.
     */
-    KDTree(const vector<Point>& points);
-    /**
-    * @brief Destructor.
-    */
+    KDTree(const std::vector<Point>& points);
+
     ~KDTree();
     /**
     * @brief Finds the nearest neighbor to the given target point.
@@ -38,7 +34,7 @@ public:
      * @param k Number of nearest neighbors to find.
      * @return Vector of k nearest points.
      */
-    vector<Point> kNearestNeighbors(const Point& target, int k) const;//external interface(searching nearest k neighbor)
+    std::vector<Point> kNearestNeighbors(const Point& target, int k) const;//external interface(searching nearest k neighbor)
 
 private:
     /**
@@ -53,7 +49,7 @@ private:
     };
 
     Node* root;              ///< Root of the KDTree.
-    vector<Point> points;    ///< Local copy of point data.
+    std::vector<Point> points;    ///< Local copy of point data.
 
     /**
      * @brief Recursively builds a KDTree.
@@ -63,7 +59,7 @@ private:
      * @param depth Current tree depth.
      * @return Pointer to the root of the subtree.
      */
-    Node* build(vector<Point>& pts, int begin, int end, int depth);
+    Node* build(std::vector<Point>& pts, int begin, int end, int depth);
 
     /**
      * @brief Recursively finds the nearest neighbor.
@@ -81,7 +77,7 @@ private:
      * @param k Number of neighbors.
      * @param heap Max-heap of (distance, point) pairs.
      */
-    void kNearest(Node* node, const Point& target, int k, vector<pair<double, Point>>& heap) const;
+    void kNearest(Node* node, const Point& target, int k, std::vector<std::pair<double, Point>>& heap) const;
 
     /**
      * @brief Computes squared Euclidean distance between two points.
@@ -99,10 +95,5 @@ private:
  */
 Point convertToPoint(GridNode& node);
 
-/**
- * @brief Computes the sum of a vector of doubles.
- * @param w Vector of weights.
- * @return Sum of the weights.
- */
-double sumVector(vector<double> w);
+double sumVector(std::vector<double> w);
 #endif

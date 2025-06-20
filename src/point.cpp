@@ -7,7 +7,6 @@
  */
 
 #include "../include/point.h"
-using namespace std;
 
 /**
  * @brief Simple deterministic noise mask to add spatial sparsity.
@@ -24,13 +23,13 @@ double noiseMask(double x, double y, double z) {
     return abs(sin(x * 0.5 + 332 + 0.1) + cos(y * 0.7 * (2 + 0.1)) + sin(z * 0.3));
 }
 
-vector<Point> generateRandomPointCloud(int N, double minC, double maxC, double minW, double maxW){
-vector<Point> cloud;
+std::vector<Point> generateRandomPointCloud(int N, double minC, double maxC, double minW, double maxW){
+std::vector<Point> cloud;
 cloud.reserve(N);
 
-default_random_engine gen(random_device{}());
-uniform_real_distribution<double> dist(minC, maxC);
-uniform_real_distribution<double> distW(minW, maxW);
+std::default_random_engine gen(std::random_device{}());
+std::uniform_real_distribution<double> dist(minC, maxC);
+std::uniform_real_distribution<double> distW(minW, maxW);
 
 while (cloud.size() < N) {
     Point p = {dist(gen), dist(gen), dist(gen), distW(gen)};

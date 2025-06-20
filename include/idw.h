@@ -12,8 +12,6 @@
 #include "../include/grid.h"
 #include "../include/utils.h"
 
-using namespace std;
-
 /**
  * @class IDWInterpolator
  * @brief Performs Inverse Distance Weighting (IDW) interpolation on a regular 3D grid using multiple point clouds.
@@ -37,7 +35,7 @@ public:
     * @param clouds A vector of point clouds, where each point cloud is a vector of Point structures.
     * @param grid A reference to the vector of GridNode structures that will receive the interpolated values.
     */
-    void interpolate(const vector<vector<Point>>& clouds, vector<GridNode>& grid);
+    void interpolate(const std::vector<std::vector<Point>>& clouds, std::vector<GridNode>& grid);
 private:
     int k_; ///< Number of nearest neighbors used in IDW interpolation.
     /**

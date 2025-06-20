@@ -13,8 +13,6 @@
 #include <random>
 #include <cmath>
 
-using namespace std;
-
 /**
  * @struct Point
  * @brief Represents a 3D point with an associated weight.
@@ -40,7 +38,7 @@ struct Point {
  * @param maxW Maximum weight value.
  * @return A vector of randomly generated points.
  */
-vector<Point> generateRandomPointCloud(
+std::vector<Point> generateRandomPointCloud(
         int N,
         double minC, double maxC,
         double minW, double maxW
