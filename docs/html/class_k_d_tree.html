@@ -99,21 +99,18 @@ $(function(){initNavTree('class_k_d_tree.html','','class_k_d_tree-members'); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a97866690bcef97fcefc8beee87578924" id="r_a97866690bcef97fcefc8beee87578924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97866690bcef97fcefc8beee87578924">KDTree</a> (const vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;points)</td></tr>
-<tr class="memdesc:a97866690bcef97fcefc8beee87578924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_k_d_tree.html" title="A 3D k-d tree for efficient nearest neighbor search in point clouds.">KDTree</a> from a set of points.  <br /></td></tr>
-<tr class="memitem:a0920219cb85bb5abc8dc1bb22c44a56c" id="r_a0920219cb85bb5abc8dc1bb22c44a56c"><td class="memItemLeft" align="right" valign="top"><a id="a0920219cb85bb5abc8dc1bb22c44a56c" name="a0920219cb85bb5abc8dc1bb22c44a56c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~KDTree</b> ()</td></tr>
-<tr class="memdesc:a0920219cb85bb5abc8dc1bb22c44a56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memitem:a021581488e723e0d8c211606d2f54cb8" id="r_a021581488e723e0d8c211606d2f54cb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a021581488e723e0d8c211606d2f54cb8">KDTree</a> (const std::vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;points)</td></tr>
+<tr class="memdesc:a021581488e723e0d8c211606d2f54cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_k_d_tree.html" title="A 3D k-d tree for efficient nearest neighbor search in point clouds.">KDTree</a> from a set of points.  <br /></td></tr>
 <tr class="memitem:a017f7a29acedb66216ec311c73f7f374" id="r_a017f7a29acedb66216ec311c73f7f374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a017f7a29acedb66216ec311c73f7f374">nearestNeighbor</a> (const <a class="el" href="struct_point.html">Point</a> &amp;target) const</td></tr>
 <tr class="memdesc:a017f7a29acedb66216ec311c73f7f374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the nearest neighbor to the given target point.  <br /></td></tr>
-<tr class="memitem:ac119ca3a480f42efeee278b6f244c96c" id="r_ac119ca3a480f42efeee278b6f244c96c"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="struct_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac119ca3a480f42efeee278b6f244c96c">kNearestNeighbors</a> (const <a class="el" href="struct_point.html">Point</a> &amp;target, int k) const</td></tr>
-<tr class="memdesc:ac119ca3a480f42efeee278b6f244c96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the k nearest neighbors to the given target point.  <br /></td></tr>
+<tr class="memitem:a99b7d7ac2ddeda919682bed6f63f53e2" id="r_a99b7d7ac2ddeda919682bed6f63f53e2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99b7d7ac2ddeda919682bed6f63f53e2">kNearestNeighbors</a> (const <a class="el" href="struct_point.html">Point</a> &amp;target, int k) const</td></tr>
+<tr class="memdesc:a99b7d7ac2ddeda919682bed6f63f53e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the k nearest neighbors to the given target point.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A 3D k-d tree for efficient nearest neighbor search in point clouds. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a97866690bcef97fcefc8beee87578924" name="a97866690bcef97fcefc8beee87578924"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97866690bcef97fcefc8beee87578924">&#9670;&#160;</a></span>KDTree()</h2>
+<a id="a021581488e723e0d8c211606d2f54cb8" name="a021581488e723e0d8c211606d2f54cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021581488e723e0d8c211606d2f54cb8">&#9670;&#160;</a></span>KDTree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,7 +118,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">KDTree::KDTree </td>
           <td>(</td>
-          <td class="paramtype">const vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>points</em></span></td><td>)</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>points</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -138,14 +135,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ac119ca3a480f42efeee278b6f244c96c" name="ac119ca3a480f42efeee278b6f244c96c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac119ca3a480f42efeee278b6f244c96c">&#9670;&#160;</a></span>kNearestNeighbors()</h2>
+<a id="a99b7d7ac2ddeda919682bed6f63f53e2" name="a99b7d7ac2ddeda919682bed6f63f53e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b7d7ac2ddeda919682bed6f63f53e2">&#9670;&#160;</a></span>kNearestNeighbors()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; KDTree::kNearestNeighbors </td>
+          <td class="memname">std::vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; KDTree::kNearestNeighbors </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_point.html">Point</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
         </tr>

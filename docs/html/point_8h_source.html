@@ -96,11 +96,11 @@ $(function(){initNavTree('point_8h_source.html','',''); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define POINT_CLOUD_INTERPOLATION_POINT_H</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;random&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">constexpr</span> <span class="keywordtype">double</span> NOISE_FILTER = 0.9;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
 <div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_point.html">   25</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_point.html">Point</a> {</div>
@@ -109,14 +109,14 @@ $(function(){initNavTree('point_8h_source.html','',''); });
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
 </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>vector&lt;Point&gt; <a class="code hl_function" href="point_8h.html#a140d3ace5c2bbac9edfa89095a9cb81f">generateRandomPointCloud</a>(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>std::vector&lt;Point&gt; <a class="code hl_function" href="point_8h.html#ab854b3469ec81a1a2e006599399c6db0">generateRandomPointCloud</a>(</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">int</span> N,</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">double</span> minC, <span class="keywordtype">double</span> maxC,</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">double</span> minW, <span class="keywordtype">double</span> maxW</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="apoint_8h_html_a140d3ace5c2bbac9edfa89095a9cb81f"><div class="ttname"><a href="point_8h.html#a140d3ace5c2bbac9edfa89095a9cb81f">generateRandomPointCloud</a></div><div class="ttdeci">vector&lt; Point &gt; generateRandomPointCloud(int N, double minC, double maxC, double minW, double maxW)</div><div class="ttdoc">Generates a random point cloud within the given coordinate and weight ranges.</div><div class="ttdef"><b>Definition</b> point.cpp:27</div></div>
+<div class="ttc" id="apoint_8h_html_ab854b3469ec81a1a2e006599399c6db0"><div class="ttname"><a href="point_8h.html#ab854b3469ec81a1a2e006599399c6db0">generateRandomPointCloud</a></div><div class="ttdeci">std::vector&lt; Point &gt; generateRandomPointCloud(int N, double minC, double maxC, double minW, double maxW)</div><div class="ttdoc">Generates a random point cloud within the given coordinate and weight ranges.</div><div class="ttdef"><b>Definition</b> point.cpp:26</div></div>
 <div class="ttc" id="astruct_point_html"><div class="ttname"><a href="struct_point.html">Point</a></div><div class="ttdoc">Represents a 3D point with an associated weight.</div><div class="ttdef"><b>Definition</b> point.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

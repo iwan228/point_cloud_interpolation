@@ -89,7 +89,7 @@ void KDTree::kNearest(Node* node, const Point& target, int k, std::vector<std::p
         return a.first < b.first;
     };//If a.first is less than b.first, then a is considered to be less than b(lambda function)
 
-    if ((int)heap.size() < k) {
+    if (static_cast<int>(heap.size()) < k) {
         heap.emplace_back(d, node->point);
         push_heap(heap.begin(), heap.end(), comp);
     } else if (d < heap.front().first) {
@@ -107,7 +107,7 @@ void KDTree::kNearest(Node* node, const Point& target, int k, std::vector<std::p
     Node* second = (delta < 0) ? node->right : node->left;
 
     kNearest(first, target, k, heap);
-    if ((int)heap.size() < k || delta * delta < heap.front().first) {
+    if (static_cast<int>(heap.size()) < k || delta * delta < heap.front().first) {
         kNearest(second, target, k, heap);
     }
 }//recursive function to find k nearest neighbors(private)

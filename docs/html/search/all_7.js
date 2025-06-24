@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['utils_2ecpp_0',['utils.cpp',['../utils_8cpp.html',1,'']]],
-  ['utils_2eh_1',['utils.h',['../utils_8h.html',1,'']]]
+  ['weight_0',['weight',['../struct_grid_node.html#ac7a7f8aac7056601c95e4c64d09bd95c',1,'GridNode']]]
 ];

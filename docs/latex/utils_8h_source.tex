@@ -10,38 +10,37 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{point_8h}{../include/point.h}}"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{grid_8h}{../include/grid.h}}"{}}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_k_d_tree_a97866690bcef97fcefc8beee87578924}{KDTree}}\ \{}
-\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_k_d_tree_a97866690bcef97fcefc8beee87578924}{KDTree}}(\textcolor{keyword}{const}\ vector<Point>\&\ points);}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_k_d_tree_a0920219cb85bb5abc8dc1bb22c44a56c}{\string~KDTree}}();}
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ \mbox{\hyperlink{class_k_d_tree_a017f7a29acedb66216ec311c73f7f374}{nearestNeighbor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target)\ \textcolor{keyword}{const};\textcolor{comment}{//external\ interface(searching\ nearest\ neighbor)}}
-\DoxyCodeLine{00041\ \ \ \ \ vector<Point>\ \mbox{\hyperlink{class_k_d_tree_ac119ca3a480f42efeee278b6f244c96c}{kNearestNeighbors}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target,\ \textcolor{keywordtype}{int}\ k)\ \textcolor{keyword}{const};\textcolor{comment}{//external\ interface(searching\ nearest\ k\ neighbor)}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ point;\ \ \ \ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ axis;\ \ \ \ \ \ \ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ Node*\ left;\ \ \ \ \ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ Node*\ right;\ \ \ \ }
-\DoxyCodeLine{00053\ \ \ \ \ \};}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ Node*\ root;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00056\ \ \ \ \ vector<Point>\ points;\ \ \ \ }
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00066\ \ \ \ \ Node*\ build(vector<Point>\&\ pts,\ \textcolor{keywordtype}{int}\ begin,\ \textcolor{keywordtype}{int}\ end,\ \textcolor{keywordtype}{int}\ depth);}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ nearest(Node*\ node,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target,\ \mbox{\hyperlink{struct_point}{Point}}\&\ best,\ \textcolor{keywordtype}{double}\&\ bestDist)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ kNearest(Node*\ node,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target,\ \textcolor{keywordtype}{int}\ k,\ vector<pair<double,\ Point>>\&\ heap)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{double}\ squaredDistance(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ b)\ \textcolor{keyword}{const};\textcolor{comment}{//calculate\ squared\ distance}}
-\DoxyCodeLine{00093\ \};}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00100\ \mbox{\hyperlink{struct_point}{Point}}\ \mbox{\hyperlink{utils_8h_aba400071c885b86db74337a19eb66a7d}{convertToPoint}}(\mbox{\hyperlink{struct_grid_node}{GridNode}}\&\ node);}
-\DoxyCodeLine{00101\ }
-\DoxyCodeLine{00107\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{utils_8h_a7d6a288c4b61feecad7862299470396c}{sumVector}}(vector<double>\ w);}
-\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_k_d_tree_a021581488e723e0d8c211606d2f54cb8}{KDTree}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_k_d_tree_a021581488e723e0d8c211606d2f54cb8}{KDTree}}(\textcolor{keyword}{const}\ std::vector<Point>\&\ points);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_k_d_tree_a021581488e723e0d8c211606d2f54cb8}{\string~KDTree}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ \mbox{\hyperlink{class_k_d_tree_a017f7a29acedb66216ec311c73f7f374}{nearestNeighbor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target)\ \textcolor{keyword}{const};\textcolor{comment}{//external\ interface(searching\ nearest\ neighbor)}}
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<Point>\ \mbox{\hyperlink{class_k_d_tree_a99b7d7ac2ddeda919682bed6f63f53e2}{kNearestNeighbors}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target,\ \textcolor{keywordtype}{int}\ k)\ \textcolor{keyword}{const};\textcolor{comment}{//external\ interface(searching\ nearest\ k\ neighbor)}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_point}{Point}}\ point;\ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ axis;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ Node*\ left;\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ Node*\ right;\ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ Node*\ root;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ std::vector<Point>\ points;\ \ \ \ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00062\ \ \ \ \ Node*\ build(std::vector<Point>\&\ pts,\ \textcolor{keywordtype}{int}\ begin,\ \textcolor{keywordtype}{int}\ end,\ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ nearest(Node*\ node,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target,\ \mbox{\hyperlink{struct_point}{Point}}\&\ best,\ \textcolor{keywordtype}{double}\&\ bestDist)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ kNearest(Node*\ node,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ target,\ \textcolor{keywordtype}{int}\ k,\ std::vector<std::pair<double,\ Point>>\&\ heap)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{double}\ squaredDistance(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}\&\ b)\ \textcolor{keyword}{const};\textcolor{comment}{//calculate\ squared\ distance}}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \mbox{\hyperlink{struct_point}{Point}}\ \mbox{\hyperlink{utils_8h_aba400071c885b86db74337a19eb66a7d}{convertToPoint}}(\mbox{\hyperlink{struct_grid_node}{GridNode}}\&\ node);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{double}\ sumVector(\textcolor{keyword}{const}\ std::vector<double>\&\ w);}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weight_0',['weight',['../struct_grid_node.html#ac7a7f8aac7056601c95e4c64d09bd95c',1,'GridNode']]]
+  ['x_0',['x',['../struct_grid_node.html#af15f6d9a0bfd0483e88664bd3eaedc64',1,'GridNode']]]
 ];

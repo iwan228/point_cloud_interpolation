@@ -96,13 +96,13 @@ $(function(){initNavTree('idw_8h_source.html','',''); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define POINT_CLOUD_INTERPOLATION_IDW_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="point_8h.html">../include/point.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="grid_8h.html">../include/grid.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">../include/utils.h</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">constexpr</span> <span class="keywordtype">double</span> ZERO = 1e-4;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="point_8h.html">../include/point.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="grid_8h.html">../include/grid.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">../include/utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
@@ -110,7 +110,7 @@ $(function(){initNavTree('idw_8h_source.html','',''); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="class_i_d_w_interpolator.html#aed77d3c7b489d94a2d82774d139b8278">IDWInterpolator</a>(<span class="keywordtype">int</span> k);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_d_w_interpolator.html#a4e765b5c450a4ff1e6e6b4d6498c7820">interpolate</a>(<span class="keyword">const</span> vector&lt;vector&lt;Point&gt;&gt;&amp; clouds, vector&lt;GridNode&gt;&amp; grid);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_d_w_interpolator.html#a7e8a68724cee22d111b84d18425e18fb">interpolate</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;Point&gt;&gt;&amp; clouds, std::vector&lt;GridNode&gt;&amp; grid);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">int</span> k_; </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">double</span> squaredDistance(<span class="keyword">const</span> <a class="code hl_struct" href="struct_point.html">Point</a>&amp; p, <span class="keyword">const</span> <a class="code hl_struct" href="struct_grid_node.html">GridNode</a>&amp; g) <span class="keyword">const</span>;</div>
@@ -118,7 +118,7 @@ $(function(){initNavTree('idw_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_i_d_w_interpolator_html_a4e765b5c450a4ff1e6e6b4d6498c7820"><div class="ttname"><a href="class_i_d_w_interpolator.html#a4e765b5c450a4ff1e6e6b4d6498c7820">IDWInterpolator::interpolate</a></div><div class="ttdeci">void interpolate(const vector&lt; vector&lt; Point &gt; &gt; &amp;clouds, vector&lt; GridNode &gt; &amp;grid)</div><div class="ttdoc">Performs IDW interpolation on the given grid using multiple point clouds.</div><div class="ttdef"><b>Definition</b> idw.cpp:17</div></div>
+<div class="ttc" id="aclass_i_d_w_interpolator_html_a7e8a68724cee22d111b84d18425e18fb"><div class="ttname"><a href="class_i_d_w_interpolator.html#a7e8a68724cee22d111b84d18425e18fb">IDWInterpolator::interpolate</a></div><div class="ttdeci">void interpolate(const std::vector&lt; std::vector&lt; Point &gt; &gt; &amp;clouds, std::vector&lt; GridNode &gt; &amp;grid)</div><div class="ttdoc">Performs IDW interpolation on the given grid using multiple point clouds.</div><div class="ttdef"><b>Definition</b> idw.cpp:17</div></div>
 <div class="ttc" id="aclass_i_d_w_interpolator_html_aed77d3c7b489d94a2d82774d139b8278"><div class="ttname"><a href="class_i_d_w_interpolator.html#aed77d3c7b489d94a2d82774d139b8278">IDWInterpolator::IDWInterpolator</a></div><div class="ttdeci">IDWInterpolator(int k)</div><div class="ttdoc">Constructor for the IDWInterpolator.</div><div class="ttdef"><b>Definition</b> idw.cpp:8</div></div>
 <div class="ttc" id="agrid_8h_html"><div class="ttname"><a href="grid_8h.html">grid.h</a></div><div class="ttdoc">Header file for generating a regular 3D grid of GridNode.</div></div>
 <div class="ttc" id="apoint_8h_html"><div class="ttname"><a href="point_8h.html">point.h</a></div><div class="ttdoc">Declaration of the Point structure and random point cloud generation function.</div></div>

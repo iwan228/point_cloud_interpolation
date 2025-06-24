@@ -33,11 +33,11 @@ void IDWInterpolator::interpolate(const std::vector<std::vector<Point>>& clouds,
                 double sumWeighted = 0, sumWeight = 0;
                 for (const auto& pt : knearest) {
                     double dist2 = squaredDistance(pt, node);
-                    if (dist2 < ZERO) {
-                        sumWeighted = pt.weight;
-                        sumWeight = 1.0;
-                        break;
-                    }
+//                    if (dist2 < ZERO) {
+//                        sumWeighted = pt.weight;
+//                        sumWeight = 1.0;
+//                        break;
+//                    }
                     sumWeighted += pt.weight / dist2;
                     sumWeight += 1.0 / dist2;
                 }
